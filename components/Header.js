@@ -19,7 +19,7 @@ function Header() {
     const h1 = document.createElement('h1');
     const temp = document.createElement('span');
 
-    date.textContent = 'March 28, 2020';
+    date.textContent = 'MARCH 28, 2020';
     h1.textContent = 'Lambda Times';
     temp.textContent = '98';
 
@@ -31,6 +31,8 @@ function Header() {
     header.appendChild(temp);
     header.appendChild(date);
 
+    
+    
     headContainer.appendChild(header);
 }
 

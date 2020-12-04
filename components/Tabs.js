@@ -14,8 +14,6 @@ import axios from 'axios';
 
 const topicData = axios.get('https://lambda-times-api.herokuapp.com/topics');
 
-console.log(topicData)
-
 const entryTabs = document.querySelector('.topics')
 
 axios
@@ -35,8 +33,5 @@ function tabs (obj){
     tab.textContent = obj;
 
     entryTabs.appendChild(tab)
-}
-
-
-
+};
 
