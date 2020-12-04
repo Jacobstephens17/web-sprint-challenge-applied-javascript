@@ -27,12 +27,9 @@ function Header() {
     h1.textContent = 'Lambda Times';
     temp.textContent = '98';
     //Setting className
-    header.className.add = 'header';
-    date.className.add = 'date';
-    temp.className.add = 'temp';
-    
-
-    
+    header.classList.add('header');
+    date.classList.add('date');
+    temp.classList.add('temp');
     //Creating Hierarchy
     header.appendChild(h1);
     header.appendChild(date);

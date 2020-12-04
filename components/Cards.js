@@ -33,27 +33,26 @@ function cardMaker(obj){
     const imgUrl = document.createElement('img');
     const authorName = document.createElement('span');
 
-    card.classList.add = ('card');
-    headline.classList.add = ('headline');
-    author.classList.add = ('author');
-    imgContainer.classList.add = ('img-container');
+    card.classList.add('card');
+    headline.classList.add('headline');
+    author.classList.add('author');
+    imgContainer.classList.add('img-container');
     
-    headline.textContent = obj.data.articles.javascript.headline;
-    author.textContent = obj.data.articles.bootstrap;
-    imgContainer.src = '';
-    imgUrl.textContent = 
-    authorName.textContent = ''
+    headline.textContent = obj.headline;
+    author.textContent = obj.authorName;
+    imgUrl.textContent = obj.authorPhoto;
+    authorName.textContent = obj.authorName;
 
-    card.appendChild('headline');
-    headline.appendChild('author');
-    headline.appendChild('imgContainer');
-    headline.appendChild('imgUrl');
-    headline.appendChild('')
+    card.appendChild(headline);
+    headline.appendChild(author);
+    headline.appendChild(imgContainer);
+    headline.appendChild(imgUrl);
+    headline.appendChild(authorName);
 
 
-    card.addEventListener('click', function(event){
-        console.log(click.headline)
-    })
+    // card.addEventListener('click', function(event){
+    //     console.log(click.headline)
+    // })
     cardEntry.appendChild(card);
 }
 
@@ -63,63 +62,55 @@ axios
         const allData = res.data.articles;
         console.log(allData)
 
-
-
         const javaScript = res.data.articles.javascript;
-        console.log(javaScript);
+        // console.log(javaScript);
 
         const indivJavaItems = javaScript.forEach((item) => {
-            console.log('JavaScript IDS', item.id);
-            console.log('JavaScript headlines', item.headline);
-            console.log('JavaScript authorPhoto', item.authorPhoto);
-            console.log('JavaScript authorName', item.authorName);
+            cardMaker(item);
+            // console.log('JavaScript ID', item.id);
+            // console.log('JavaScript Headline', item.headline);
+            // console.log('JavaScript AuthorPhoto', item.authorPhoto);
+            // console.log('JavaScript AuthorName', item.authorName);
         });
-
-
-
+    
         const bootstrap = res.data.articles.bootstrap;
-        console.log(bootstrap);
+        // console.log(bootstrap);
 
         const indivbootStrapItems = bootstrap.forEach((item) => {
-            console.log('Bootstrap IDS', item.id);
-            console.log('Bootstrap headlines', item.headline);
-            console.log('Bootstrap authorPhoto', item.authorPhoto);
-            console.log('Bootstrap authorName', item.authorName);
+            // console.log('Bootstrap ID', item.id);
+            // console.log('Bootstrap Headline', item.headline);
+            // console.log('Bootstrap AuthorPhoto', item.authorPhoto);
+            // console.log('Bootstrap AuthorName', item.authorName);
         });
-
-
 
         const technology = res.data.articles.technology;
-        console.log(technology);
+        // console.log(technology);
 
         const indivTechItems = technology.forEach((item) => {
-            console.log('Technology IDS', item.id);
-            console.log('Technology headlines', item.headline);
-            console.log('Technology authorPhoto', item.authorPhoto);
-            console.log('Technology authorName', item.authorName);
+            // console.log('Technology ID', item.id);
+            // console.log('Technology Headline', item.headline);
+            // console.log('Technology AuthorPhoto', item.authorPhoto);
+            // console.log('Technology AuthorName', item.authorName);
         });
-
-
 
         const jquery = res.data.articles.jquery;
-        console.log(jquery);
+        // console.log(jquery);
 
         const indivjQueryItems = jquery.forEach((item) => {
-            console.log('jQuery IDS', item.id);
-            console.log('jQuery headlines', item.headline);
-            console.log('jQuery authorPhoto', item.authorPhoto);
-            console.log('jQuery authorName', item.authorName);
+            // console.log('jQuery ID', item.id);
+            // console.log('jQuery Headline', item.headline);
+            // console.log('jQuery AuthorPhoto', item.authorPhoto);
+            // console.log('jQuery AuthorName', item.authorName);
         });
 
-
         const node = res.data.articles.node;
-        console.log(node);
+        // console.log(node);
 
         const indivNodeItems = node.forEach((item) => {
-            console.log('Node IDS', item.id);
-            console.log('Node headlines', item.headline);
-            console.log('Node authorPhoto', item.authorPhoto);
-            console.log('Node authorName', item.authorName);
+            // console.log('Node ID', item.id);
+            // console.log('Node Headline', item.headline);
+            // console.log('Node AuthorPhoto', item.authorPhoto);
+            // console.log('Node AuthorName', item.authorName);
         });
         
         javaScript.addEventListener
