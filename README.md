@@ -35,7 +35,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 4. Why would we convert a NodeList into an Array?
 
 5. What is a component?
-    
+
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
@@ -62,7 +62,7 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the `index.html` file itself.
+- [1] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the `index.html` file itself.
 
 - [ ] Following the instructions in the `components/Header.js` file, create the Header.
 
