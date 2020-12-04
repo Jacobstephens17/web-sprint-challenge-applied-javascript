@@ -39,20 +39,20 @@ function cardMaker(obj){
     imgContainer.classList.add('img-container');
     
     headline.textContent = obj.headline;
-    author.textContent = obj.authorName;
-    imgUrl.textContent = obj.authorPhoto;
+    // author.textContent = obj.authorName;
+    imgUrl.src = obj.authorPhoto;
     authorName.textContent = obj.authorName;
 
     card.appendChild(headline);
-    headline.appendChild(author);
-    headline.appendChild(imgContainer);
-    headline.appendChild(imgUrl);
-    headline.appendChild(authorName);
+    card.appendChild(author);
+    imgContainer.appendChild(imgUrl);
+    author.appendChild(imgContainer);
+    author.appendChild(authorName);
 
 
-    // card.addEventListener('click', function(event){
-    //     console.log(click.headline)
-    // })
+    card.addEventListener('click', function(event){
+        console.log(headline)
+    })
     cardEntry.appendChild(card);
 }
 
@@ -67,6 +67,7 @@ axios
 
         const indivJavaItems = javaScript.forEach((item) => {
             cardMaker(item);
+
             // console.log('JavaScript ID', item.id);
             // console.log('JavaScript Headline', item.headline);
             // console.log('JavaScript AuthorPhoto', item.authorPhoto);
@@ -77,6 +78,7 @@ axios
         // console.log(bootstrap);
 
         const indivbootStrapItems = bootstrap.forEach((item) => {
+            cardMaker(item);
             // console.log('Bootstrap ID', item.id);
             // console.log('Bootstrap Headline', item.headline);
             // console.log('Bootstrap AuthorPhoto', item.authorPhoto);
@@ -87,6 +89,7 @@ axios
         // console.log(technology);
 
         const indivTechItems = technology.forEach((item) => {
+            cardMaker(item);
             // console.log('Technology ID', item.id);
             // console.log('Technology Headline', item.headline);
             // console.log('Technology AuthorPhoto', item.authorPhoto);
@@ -97,6 +100,7 @@ axios
         // console.log(jquery);
 
         const indivjQueryItems = jquery.forEach((item) => {
+            cardMaker(item);
             // console.log('jQuery ID', item.id);
             // console.log('jQuery Headline', item.headline);
             // console.log('jQuery AuthorPhoto', item.authorPhoto);
@@ -107,6 +111,7 @@ axios
         // console.log(node);
 
         const indivNodeItems = node.forEach((item) => {
+            cardMaker(item);
             // console.log('Node ID', item.id);
             // console.log('Node Headline', item.headline);
             // console.log('Node AuthorPhoto', item.authorPhoto);
@@ -114,5 +119,6 @@ axios
         });
         
         javaScript.addEventListener
+
         
     }) 

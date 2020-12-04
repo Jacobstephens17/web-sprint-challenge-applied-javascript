@@ -31,8 +31,8 @@ function Header() {
     date.classList.add('date');
     temp.classList.add('temp');
     //Creating Hierarchy
-    header.appendChild(h1);
     header.appendChild(date);
+    header.appendChild(h1);
     header.appendChild(temp);
     //Appending Results to headerContainer defined
     headContainer.appendChild(header);
