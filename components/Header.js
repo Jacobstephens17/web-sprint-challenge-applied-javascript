@@ -35,5 +35,3 @@ function Header() {
 }
 
 const newH = Header();
-
-headContainer.appendChild(newH);

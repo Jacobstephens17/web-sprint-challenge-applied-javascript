@@ -38,5 +38,5 @@ function tabs (obj){
 }
 
 
-const tabBar = document.querySelector('.tabs');
+
 
